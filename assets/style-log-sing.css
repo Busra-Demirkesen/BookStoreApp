@@ -1,0 +1,206 @@
+
+.blur-bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(3px); 
+    transition: 0.1s ease;
+}
+
+.show-popup .blur-bg-overlay{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.form-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -100%);
+  max-width: 720px;
+  width: 100%; 
+  opacity: 0;
+    pointer-events: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.show-popup .form-popup{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, opacity 0.5s;
+}
+
+.close-btn{
+    position: absolute;
+    top:12px;
+    right: 12px;
+    color: #878484;
+    cursor: pointer;
+}
+
+.form-popup .form-box{
+    display: flex;
+}
+
+.form-box .form-details{
+    max-width: 330px;
+    width: 100%;
+    color: #fff;
+   padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login .form-details, .signup .form-details{
+    background: url(images/login-picture.jpg);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.signup .form-details{
+    background: url(images/login-picture.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.form-box h2{
+text-align: center;
+font-size: 1.8rem;
+font-weight: 600;
+margin-bottom: 30px;
+}
+
+.form-box .form-content{
+    width: 100%;
+    padding: 35px;
+}
+form .input-field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+form .input-field input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field input:focus{
+    border-color: #00acc1;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.input-field input:is(:focus, :valid){
+    padding: 16px 15px 0;
+}
+
+form .input-field label{
+    position: absolute;
+    top:50%;
+    left: 15px;
+    color:#717171;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ label {
+
+    font-size: 0.75rem;
+    transform: translateY(-120%);
+    color:#00acc1;
+
+}
+
+.form-box a{
+    color: #00acc1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+
+.form-box a:hover{
+    color: #00acc1;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 10px;
+    
+}
+
+.form-box:where(.forgot-pass, .policy-text){
+    display: inline-flex;
+    margin-top: 14px;
+    font-size: 0.95rem;
+}
+form button{
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 50px;
+    background-color: #00acc1;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 14px 0;
+    margin: 25px 0;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+form button:hover{
+    background-color: transparent;
+    border: 2px solid #00acc1;
+    color: #00acc1;
+    
+}
+
+.form-box .bottom-link{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #717171;
+}
+.form-popup .signup,
+.form-popup.show-signup .login{
+    display: none;
+}
+
+.form-popup.show-signup .signup{
+  display: flex;
+}
+
+.signup .policy-text {
+    display: flex;
+    align-items: center;
+}
+
+.signup .policy-text input{
+    width: 14px;
+    height: 14px;
+    margin-right: 7px;
+
+}
