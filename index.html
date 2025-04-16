@@ -21,6 +21,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  />
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="assets/style-log-sing.css">
    
@@ -59,11 +64,76 @@
         </div>
       </div>
     </header>
+    <div class="blur-bg-overlay"></div>
 
     <!--End of Header Section-->
 
+<!--Popup Form-->
+<div class="form-popup" id="form-popup">
+  <span class="close-btn material-symbols-outlined" id="close-btn">close</span>
+  <div class="form-box login">
+    <div class="form-details">
+      <h2>Tekrar Hoşgeldiniz</h2>
+      <p>Bizimle iletişime geçmek için lütfen aşağıdaki formu doldurun.</p>
+    </div>
+    <div class="form-content">
+      <h2>Giriş Yap</h2>
+      <form action="index.html">
+        <div class="input-field">
+          <input type="email" required />
+          <label for="email">E-posta</label>
+        </div>
 
-    <div class="blur-bg-overlay"></div>
+        <div class="input-field">
+          <input type="password" required />
+          <label for="password">Şifre</label>
+        </div>
+        <a href="#" class="forgot-pass">Şifrenizi mi unuttunuz?</a>
+        <button type="submit" class="submit-btn">Giriş Yap</button>
+        <div class="bottom-link">
+          Bir hesabın yok mu?
+          <a href="#" class="create-account" id="signup-link">Hesap Oluştur</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="form-box signup">
+    <div class="form-details">
+      <h2>Yeni Hesap Oluşturun</h2>
+      <p>Topluluğumuzun bir parçası olun ve yeni kitapları keşfedin.</p>
+    </div>
+
+    <div class="form-content">
+      <h2>Üye Olun</h2>
+      <form action="index.html">
+        <div class="input-field">
+          <input type="email" required />
+          <label for="email">Lütfen E-Posta adresinizi girin</label>
+        </div>
+
+        <div class="input-field">
+          <input type="password" required />
+          <label for="password">Şifre oluşturun</label>
+        </div>
+
+        <div class="policy-text">
+          <input type="checkbox" id="policy" />
+          <label for="policy" class="policy-label"
+            >I agree the <a href="#">Terms&Conditions</a></label
+          >
+        </div>
+
+        <button type="submit" class="submit-btn">Hesap Oluştur</button>
+        <div class="bottom-link">
+          Bir hesabın yok mu?
+          <a href="#" class="create-account" id="login-link">Giriş yap</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+   
     <!--Begining of Hero Section-->
     <section id="hero" class="hero-section">
       <div class="hero-container">
