@@ -1,7 +1,10 @@
+
+
 const loginBtn = document.querySelector('.login-btn');
 const closePopupBtn = document.querySelector('.form-popup .close-btn');
 
 const signupBtn = document.querySelector('.signup-btn');
+const signupHero = document.querySelector('.signup-btn-hero');
 
 const loginSignGroupLink = document.querySelectorAll('.form-box .bottom-link a'); // Tüm bağlantıları seçiyoruz
 
@@ -35,7 +38,14 @@ loginSignGroupLink.forEach(link => {
     });
 });
 
-signupBtn.addEventListener('click', () => {
+function showSignupForm() {
     document.body.classList.add('show-popup');
     formPopup.classList.add('show-signup'); // signup formu göster
-});
+}
+
+signupBtn.addEventListener('click', showSignupForm);
+signupHero.addEventListener('click', showSignupForm);
+
+
+
+
