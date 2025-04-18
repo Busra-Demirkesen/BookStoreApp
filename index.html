@@ -23,12 +23,12 @@
     />
 
     <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-  />
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
     <link rel="stylesheet" href="./assets/style.css" />
-    <link rel="stylesheet" href="assets/style-log-sing.css">
-   
+    <link rel="stylesheet" href="assets/style-log-sing.css" />
+
     <title>Books</title>
   </head>
   <body>
@@ -68,72 +68,76 @@
 
     <!--End of Header Section-->
 
-<!--Popup Form-->
-<div class="form-popup" id="form-popup">
-  <span class="close-btn material-symbols-outlined" id="close-btn">close</span>
-  <div class="form-box login">
-    <div class="form-details">
-      <h2>Tekrar Hoşgeldiniz</h2>
-      <p>Bizimle iletişime geçmek için lütfen aşağıdaki formu doldurun.</p>
+    <!--Popup Form-->
+    <div class="form-popup" id="form-popup">
+      <span class="close-btn material-symbols-outlined" id="close-btn"
+        >close</span
+      >
+      <div class="form-box login">
+        <div class="form-details">
+          <h2>Tekrar Hoşgeldiniz</h2>
+          <p>Bizimle iletişime geçmek için lütfen aşağıdaki formu doldurun.</p>
+        </div>
+        <div class="form-content">
+          <h2>Giriş Yap</h2>
+          <form action="index.html">
+            <div class="input-field">
+              <input type="email" required />
+              <label for="email">E-posta</label>
+            </div>
+
+            <div class="input-field">
+              <input type="password" required />
+              <label for="password">Şifre</label>
+            </div>
+            <a href="#" class="forgot-pass">Şifrenizi mi unuttunuz?</a>
+            <button type="submit" class="submit-btn">Giriş Yap</button>
+            <div class="bottom-link">
+              Bir hesabın yok mu?
+              <a href="#" class="create-account" id="signup-link"
+                >Hesap Oluştur</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="form-box signup">
+        <div class="form-details">
+          <h2>Yeni Hesap Oluşturun</h2>
+          <p>Topluluğumuzun bir parçası olun ve yeni kitapları keşfedin.</p>
+        </div>
+
+        <div class="form-content">
+          <h2>Üye Olun</h2>
+          <form action="index.html">
+            <div class="input-field">
+              <input type="email" required />
+              <label for="email">Lütfen E-Posta adresinizi girin</label>
+            </div>
+
+            <div class="input-field">
+              <input type="password" required />
+              <label for="password">Şifre oluşturun</label>
+            </div>
+
+            <div class="policy-text">
+              <input type="checkbox" id="policy" />
+              <label for="policy" class="policy-label"
+                >I agree the <a href="#">Terms&Conditions</a></label
+              >
+            </div>
+
+            <button type="submit" class="submit-btn">Hesap Oluştur</button>
+            <div class="bottom-link">
+              Bir hesabın yok mu?
+              <a href="#" class="create-account" id="login-link">Giriş yap</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="form-content">
-      <h2>Giriş Yap</h2>
-      <form action="index.html">
-        <div class="input-field">
-          <input type="email" required />
-          <label for="email">E-posta</label>
-        </div>
 
-        <div class="input-field">
-          <input type="password" required />
-          <label for="password">Şifre</label>
-        </div>
-        <a href="#" class="forgot-pass">Şifrenizi mi unuttunuz?</a>
-        <button type="submit" class="submit-btn">Giriş Yap</button>
-        <div class="bottom-link">
-          Bir hesabın yok mu?
-          <a href="#" class="create-account" id="signup-link">Hesap Oluştur</a>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="form-box signup">
-    <div class="form-details">
-      <h2>Yeni Hesap Oluşturun</h2>
-      <p>Topluluğumuzun bir parçası olun ve yeni kitapları keşfedin.</p>
-    </div>
-
-    <div class="form-content">
-      <h2>Üye Olun</h2>
-      <form action="index.html">
-        <div class="input-field">
-          <input type="email" required />
-          <label for="email">Lütfen E-Posta adresinizi girin</label>
-        </div>
-
-        <div class="input-field">
-          <input type="password" required />
-          <label for="password">Şifre oluşturun</label>
-        </div>
-
-        <div class="policy-text">
-          <input type="checkbox" id="policy" />
-          <label for="policy" class="policy-label"
-            >I agree the <a href="#">Terms&Conditions</a></label
-          >
-        </div>
-
-        <button type="submit" class="submit-btn">Hesap Oluştur</button>
-        <div class="bottom-link">
-          Bir hesabın yok mu?
-          <a href="#" class="create-account" id="login-link">Giriş yap</a>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-   
     <!--Begining of Hero Section-->
     <section id="hero" class="hero-section">
       <div class="hero-container">
@@ -155,7 +159,7 @@
                       </h3>
                       <div class="btn-container">
                         <button class="explore-btn">Keşfet</button>
-                        <button class="signup-btn">Üye ol</button>
+                        <button class="signup-btn-hero">Üye ol</button>
                       </div>
                     </div>
                   </div>
@@ -322,12 +326,18 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="img-container">
-                    <img src="assets/images/insan ne ile yaşar.jpg" alt="recommend2" />
+                    <img
+                      src="assets/images/insan ne ile yaşar.jpg"
+                      alt="recommend2"
+                    />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="img-container">
-                    <img src="assets/images/engereğin gözü2.jpg" alt="recommend3" />
+                    <img
+                      src="assets/images/engereğin gözü2.jpg"
+                      alt="recommend3"
+                    />
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -337,7 +347,10 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="img-container">
-                    <img src="assets/images/rezonans kanunu.jpg" alt="recommend3" />
+                    <img
+                      src="assets/images/rezonans kanunu.jpg"
+                      alt="recommend3"
+                    />
                   </div>
                 </div>
               </div>
@@ -357,7 +370,10 @@
           <h4>Milli Eğitim Bakanlığı'nın tavsiye ettiği kitaplar</h4>
           <h1>Sizin için derlediğimiz kitaplara göz atın...</h1>
           <p>
-            Türkiye Cumhuriyeti Milli Eğitim Bakanlığı tarafından öğrencilerin okuma alışkanlığı kazanmaları amacıyla önerilen ve tavsiye edilen '100 Temel Eser' listesinden seçtiğimiz, ilköğretim ve ortaöğretim düzeyindeki öğrencilere yönelik kitapları inceleyebilirsiniz.
+            Türkiye Cumhuriyeti Milli Eğitim Bakanlığı tarafından öğrencilerin
+            okuma alışkanlığı kazanmaları amacıyla önerilen ve tavsiye edilen
+            '100 Temel Eser' listesinden seçtiğimiz, ilköğretim ve ortaöğretim
+            düzeyindeki öğrencilere yönelik kitapları inceleyebilirsiniz.
           </p>
         </div>
         <div class="content-container">
@@ -443,7 +459,10 @@
 
           <div class="product-card">
             <div class="img-container">
-              <img src="assets/images/dokuzuncu hariciye koğuşu2-100.jpg" alt="book1" />
+              <img
+                src="assets/images/dokuzuncu hariciye koğuşu2-100.jpg"
+                alt="book1"
+              />
             </div>
             <div class="text-container">
               <h1>Dokuzuncu Hariciye Koğuşu</h1>
@@ -462,7 +481,10 @@
 
           <div class="product-card">
             <div class="img-container">
-              <img src="assets/images/fareler ve insanlar-100.jpg" alt="book1" />
+              <img
+                src="assets/images/fareler ve insanlar-100.jpg"
+                alt="book1"
+              />
             </div>
             <div class="text-container">
               <h1>Fareler ve İnsanlar</h1>
@@ -528,7 +550,13 @@
             <h4>Bu ayın Öne Çıkan Kitabı:</h4>
             <h1>Öne çıkan başlıklarımızı keşfedebilirsiniz</h1>
             <p>
-              Reşat Nuri Güntekin’in Çalıkuşu adlı romanı, Türk edebiyatının en önemli klasiklerinden biridir. İlk kez 1922 yılında tefrika edilmeye başlamış, sonra kitap olarak yayımlanmıştır. Roman; dönemin toplumsal yapısını, kadın-erkek ilişkilerini, Anadolu’nun yaşam şartlarını ve bireyin iç dünyasını oldukça güçlü bir şekilde yansıtır.Aynı zamanda Mustafa Kemal Atatürk'ün 'Benim başucu kitabımdır' dediği eserdir.
+              Reşat Nuri Güntekin’in Çalıkuşu adlı romanı, Türk edebiyatının en
+              önemli klasiklerinden biridir. İlk kez 1922 yılında tefrika
+              edilmeye başlamış, sonra kitap olarak yayımlanmıştır. Roman;
+              dönemin toplumsal yapısını, kadın-erkek ilişkilerini, Anadolu’nun
+              yaşam şartlarını ve bireyin iç dünyasını oldukça güçlü bir şekilde
+              yansıtır.Aynı zamanda Mustafa Kemal Atatürk'ün 'Benim başucu
+              kitabımdır' dediği eserdir.
             </p>
           </div>
           <div class="featured-book">
@@ -547,16 +575,25 @@
                   <p>Kitabın Konusu:</p>
                   <div class="synopsis-container">
                     <h3>Özet</h3>
-                    <p>Roman, Feride adlı genç ve idealist bir kızın hayatını anlatır. Küçük yaşta annesini kaybeden Feride, teyzesinin yanında büyür ve kuzeni Kamuran ile çocukluktan beri süregelen bir yakınlık içindedir. Zamanla bu yakınlık aşka dönüşür ve nişanlanırlar. Ancak Feride, Kamuran’ın kendisini aldattığını öğrenince düğün günü her şeyi bırakıp kaçar.
-
-                      Bundan sonra öğretmen olarak Anadolu’nun çeşitli köy ve kasabalarında görev yapar. Zor şartlarda, yalnız başına, hem hayat mücadelesi verir hem de kendini bulur. Bu süreçte yaşadığı olaylar, karşılaştığı insanlar ve iç dünyasında yaşadığı değişimler romanın ana temasını oluşturur.</p>
-
+                    <p>
+                      Roman, Feride adlı genç ve idealist bir kızın hayatını
+                      anlatır. Küçük yaşta annesini kaybeden Feride, teyzesinin
+                      yanında büyür ve kuzeni Kamuran ile çocukluktan beri
+                      süregelen bir yakınlık içindedir. Zamanla bu yakınlık aşka
+                      dönüşür ve nişanlanırlar. Ancak Feride, Kamuran’ın
+                      kendisini aldattığını öğrenince düğün günü her şeyi
+                      bırakıp kaçar. Bundan sonra öğretmen olarak Anadolu’nun
+                      çeşitli köy ve kasabalarında görev yapar. Zor şartlarda,
+                      yalnız başına, hem hayat mücadelesi verir hem de kendini
+                      bulur. Bu süreçte yaşadığı olaylar, karşılaştığı insanlar
+                      ve iç dünyasında yaşadığı değişimler romanın ana temasını
+                      oluşturur.
+                    </p>
 
                     <div class="synopsis-row">
                       <div class="col">
                         <h3>Reşat Nuri Güntekin</h3>
                         <p>tarafından yazıldı</p>
-                        
                       </div>
                       <div class="col">
                         <h3>Yıl</h3>
@@ -573,7 +610,43 @@
             </div>
           </div>
         </div>
-        <div class="col"></div>
+        <div class="col">
+          <div class="books-grid">
+            <div class="img-container">
+              <img src="assets/images/tutunamayanlar.jpg" alt="book-grid" />
+            </div>
+            <div class="img-container">
+              <img
+                src="assets/images/saatleri ayarlama enstitüsü.jpg"
+                alt="book-grid"
+              />
+            </div>
+            <div class="img-container">
+              <img
+                src="assets/images/simyacı-grid.jpg"
+                alt="book-grid"
+              />
+            </div>
+            <div class="img-container">
+              <img
+                src="assets/images/serenad-grid.jpg"
+                alt="book-grid"
+              />
+            </div>
+            <div class="img-container">
+              <img
+                src="assets/images/bülbülü öldürmek-grid.jpg"
+                alt="book-grid"
+              />
+            </div>
+            <div class="img-container">
+              <img
+                src="assets/images/anayurt oteli-grid.jpg"
+                alt="book-grid"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!--End of Featured Books Section-->
@@ -588,6 +661,5 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/app.js"></script>
     <script src="./assets/script.js"></script>
-    
   </body>
 </html>

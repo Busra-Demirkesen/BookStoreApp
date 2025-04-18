@@ -206,3 +206,63 @@ form button:hover{
 
 }
 
+
+
+
+@media (max-width:950px){
+
+    .menu-container :is(.menu-btn, .links .close-btn){
+      display: block;
+    }
+  
+    .menu-container{
+      padding: 15px 0;
+    }
+   
+  
+    .menu-container .links{
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      display: block;
+      padding-top: 60px;
+      text-align: center;
+  
+      background-color: #fff;
+      transition: 0.3s ease;
+    }
+  
+    .menu-container .links.show-menu{
+       left:0;
+    }
+    .login-btn,.signup-btn{
+      font-size: 0.9rem;
+      padding: 7px 10px;
+    }
+  
+    .menu-container .links a{
+      color:#000;
+    display: inline-flex;
+  margin: 20px 0;
+  font-size: 1.2rem;
+    
+  }
+  }
+  
+  @media (max-width:720px){
+      .form-popup{
+          width: 90%;        
+      }
+      .form-box .form-details{
+          display: none;
+      }
+      .form-box .form-content{
+          padding: 20px 30px;
+      }
+      .form-box h2{
+          font-size:1.5rem;
+      }
+  }
+

@@ -582,6 +582,7 @@ header .nav-container .btn-container .signup-btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 50px;
 }
 
 .featured-books-section .featured-books-container .col {
@@ -689,4 +690,29 @@ font-size: 20px;
   .synopsis-container .synopsis-footer .read-btn:hover{
     opacity: 0.7;
   }
+
+  .books-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+  }
+
+  .books-grid .img-container{
+    width:100%;
+    height: 100%;
+  }
   
+  .books-grid .img-container img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+  }
+  
+  .books-grid .img-container img:hover{
+    scale: 1.05;
+    rotate: 3deg;
+  }
