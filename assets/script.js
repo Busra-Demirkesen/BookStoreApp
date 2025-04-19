@@ -57,3 +57,36 @@ var swiper = new Swiper(".heroSwiper", {
 
     
   });
+
+
+  var swiper4 = new Swiper(".TestimonialsSwiper", {
+    spaceBetween: 30,
+    slidesPerView: 3,
+    centeredSlides: true,
+    autoplay: {
+    delay: 2500,
+     disableOnInteraction: false,
+   },
+    loop:true,
+
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      "@0.75": {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      "@1.00": {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      "@1.50": {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+    }
+
+    
+  });
