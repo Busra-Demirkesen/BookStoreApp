@@ -480,6 +480,26 @@ header .nav-container .btn-container .signup-btn:hover {
   justify-content: center;
   align-items: center;
 }
+.read-listen-button-container{
+display: flex;
+gap:10px;
+}
+
+.read-btn, .listen-btn {
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: black;
+  background-color: transparent;
+}
+
+.read-btn:hover, .listen-btn:hover{
+  color:#e6963c;
+}
 
 .product-card {
   flex: 1 1 calc(25% - 38px); /* 4 kart için */
@@ -489,6 +509,13 @@ header .nav-container .btn-container .signup-btn:hover {
   flex-direction: column;
   align-items: center;
 }
+.special-offers-container .product-card .text-container .col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:20px;
+}
+
 
 .product-card .img-container {
   height: 400px;
@@ -731,13 +758,14 @@ header .nav-container .btn-container .signup-btn:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-flex-direction:column;
+  flex-direction:column;
 }
 
 .testimonials-section .title-container{
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px 0;
@@ -770,7 +798,7 @@ flex-direction:column;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding:20px;
   border-radius:10px;
-cursor:grab;
+  cursor:grab;
 }
 
 .testimonial .top h1 {
