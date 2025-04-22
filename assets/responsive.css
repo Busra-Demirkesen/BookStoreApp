@@ -153,6 +153,15 @@ footer .footer-container{
 footer .menu-container{
   margin:0;
 }
+
+.hero-swiper-container .slider-container .text-container{
+  top:5%;
+  width: 80%;
+}
+
+.hero-swiper-container .slider-container .text-container .btn-container{
+  display: none;
+}
   }
 
 
