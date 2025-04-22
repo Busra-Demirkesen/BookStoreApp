@@ -42,9 +42,15 @@ const menu = document.getElementById('menu');
 const closeBtn = document.getElementById('close-btn');
 const menuBtn = document.getElementById('menu-btn');
 const menuLinks = document.querySelectorAll('.menu-container .menu-list li a');
+const mainHeader = document.getElementById('main-header');
+
+const threshold = 500;
 
 function close(){
-  menu.style.transform = 'translateX(-100%)';
+  if(window.innerWidth <= 800){
+    menu.style.transform = 'translateX(-100%)';
+  }
+  
 }
 
 
@@ -58,3 +64,14 @@ menuBtn.addEventListener('click',()=>{
   menu.style.transform = 'translateX(0%)';
 });
 
+window.addEventListener('scroll', ()=>{
+  if(window.pageYOffset > threshold) {
+    mainHeader.classList.add('fixed-header');
+    }
+});
+
+window.addEventListener('resize', ()=>{
+  if(window.innerWidth > 800){
+    menu.style.transform = 'translateX(0%)';
+  }
+})
