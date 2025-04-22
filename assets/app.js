@@ -49,3 +49,27 @@ signupHero.addEventListener('click', showSignupForm);
 
 
 
+//Hamburger menü
+const menu = document.getElementById('menu');
+const closeBtn = document.getElementById('close-btn');
+const menuBtn = document.getElementById('menu-btn');
+const menuLink = document.querySelectorAll('.menu-container .menu-list li a');
+
+
+function close(){
+  menu.style.transform = 'translateX(100%)';
+}
+
+
+closeBtn.addEventListener('click', close
+  
+);
+
+menuLink.forEach((link)=>{
+  link.addEventListener('click',close)
+});
+
+
+menuBtn.addEventListener('click', ()=>{
+  menu.style.transform = 'translateX(0%)';
+});

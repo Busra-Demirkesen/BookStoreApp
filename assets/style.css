@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -117,6 +118,10 @@ header .nav-container .btn-container .signup-btn:hover {
   border: 1px solid #574e4e;
   background-color: transparent;
   color: #574e4e;
+}
+
+header .close-btn, header .menu-btn{
+  display: none;
 }
 
 /*Swiper Library*/
