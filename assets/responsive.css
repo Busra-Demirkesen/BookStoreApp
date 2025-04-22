@@ -121,8 +121,7 @@ font-size: 18px;
       color: #141414;
       font-size: 18px;
       width: 50px;
-      height: 50px;
-     
+      height: 50px;     
       transition: all 0.5s linear;
         }
 
@@ -136,7 +135,7 @@ font-size: 18px;
 
         header .menu-btn{
           display: flex;
-         
+        
         }
   }
 
