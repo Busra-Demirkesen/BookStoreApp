@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+
   // LOGIN - SIGNUP FORM
   const loginBtn = document.querySelector('.login-btn');
   const closePopupBtn = document.querySelector('.form-popup .close-btn');
