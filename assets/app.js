@@ -47,5 +47,22 @@ signupBtn.addEventListener('click', showSignupForm);
 signupHero.addEventListener('click', showSignupForm);
 
 
+const menu = document.getElementById('menu');
+const closeBtn = document.getElementById('close-btn');
+const menuBtn = document.getElementById('menu-btn');
+const menuLinks = document.querySelectorAll('.menu-container .menu-list li a');
 
+function close(){
+    menu.style.transform = 'translateX(-100%)';
+}
+
+closeBtn.addEventListener('click',close);
+
+menuLinks.forEach((link)=>{
+link.addEventListener('click',close);
+})
+
+menuBtn.addEventListener('click', ()=>{
+    menu.style.transform = 'translateX(0%)';
+})
 

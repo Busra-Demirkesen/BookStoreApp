@@ -41,6 +41,32 @@ header .nav-container .logo-container {
   gap: 5px;
   cursor: pointer;
 }
+header .close-btn, header .menu-btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top:10px;
+      right: 10px;
+      background-color: transparent;
+      width: 20px;
+      height: 20px;
+      border: none;
+      color:#3d3838;
+}
+header .menu-btn{
+  
+  display: flex;
+  background: transparent!important;
+  
+ 
+ }
+
+ header .menu-btn i{
+  color: #333;
+font-size: 18px;}
+
+
 
 header .nav-container .logo-container .logo {
   width: 55px;
