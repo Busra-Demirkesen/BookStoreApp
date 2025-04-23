@@ -74,4 +74,15 @@ window.addEventListener('resize', ()=>{
   if(window.innerWidth > 800){
     menu.style.transform = 'translateX(0%)';
   }
-})
+});
+
+
+
+
+document.getElementById("search-button").addEventListener("click", () => {
+  const query = document.getElementById("search-input").value.trim();
+  if (query !== "") {
+    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+  }
+});
+

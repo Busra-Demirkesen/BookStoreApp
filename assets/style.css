@@ -162,6 +162,103 @@ header .close-btn, header .menu-btn{
   z-index: 1000;
 }
 
+
+/*Searc Books*/
+
+/* Arama başlığı ve kutusu */
+.book-search-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  max-width: 80%;
+}
+
+#search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Sayfa başlığı */
+.search-title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Sonuçlar alanı */
+#book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+/* Kitap kartları */
+.product-card {
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Kart içeriği */
+.text-container {
+  padding: 15px;
+  text-align: center;
+}
+
+.text-container h1 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.text-container h3 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Buton grubu */
+.read-listen-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
 /*Swiper Library*/
 .swiper {
   width: 100%;
