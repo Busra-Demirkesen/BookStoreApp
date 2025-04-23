@@ -24,7 +24,7 @@ if (query) {
         const authors = info.authors?.join(", ") || "Yazar bilgisi yok";
         const preview = info.previewLink || "#";
 
-        // ⭐ Rating işlemi
+     
         const rating = info.averageRating || 0;
         let starsHtml = "";
         const fullStars = Math.floor(rating);
