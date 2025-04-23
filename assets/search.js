@@ -18,7 +18,8 @@ if (query) {
 
       data.items.forEach(book => {
         const info = book.volumeInfo;
-        const image = info.imageLinks?.thumbnail || "https://via.placeholder.com/128x200?text=No+Image";
+        const image = info.imageLinks?.thumbnail || info.imageLinks?.smallThumbnail || "https://via.placeholder.com/128x200?text=No+Image";
+
         const title = info.title || "Başlık yok";
         const authors = info.authors?.join(", ") || "Yazar bilgisi yok";
         const preview = info.previewLink || "#";
