@@ -23,6 +23,23 @@ if (query) {
         const authors = info.authors?.join(", ") || "Yazar bilgisi yok";
         const preview = info.previewLink || "#";
 
+        // ⭐ Rating işlemi
+        const rating = info.averageRating || 0;
+        let starsHtml = "";
+        const fullStars = Math.floor(rating);
+        const halfStar = rating % 1 >= 0.5;
+
+        for (let i = 0; i < fullStars; i++) {
+          starsHtml += `<i class="fa-solid fa-star"></i>`;
+        }
+        if (halfStar) {
+          starsHtml += `<i class="fa-solid fa-star-half-stroke"></i>`;
+        }
+        const totalStars = fullStars + (halfStar ? 1 : 0);
+        for (let i = totalStars; i < 5; i++) {
+          starsHtml += `<i class="fa-regular fa-star"></i>`;
+        }
+
         container.innerHTML += `
           <div class="product-card">
             <div class="img-container">
@@ -31,16 +48,8 @@ if (query) {
             <div class="text-container">
               <h1>${title}</h1>
               <h3>${authors}</h3>
-              <div class="col">
-                <div class="ratings">
-                  <p><i class="fa-solid fa-star"></i>4.5</p>
-                </div>
-                <div class="read-listen-button-container">
-                  <a class="read-btn" href="${preview}" target="_blank">
-                    <i class="fa-solid fa-glasses"></i>
-                  </a>
-                </div>
-              </div>
+              <div class="ratings">${starsHtml}</div>
+              
             </div>
           </div>
         `;
