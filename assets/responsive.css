@@ -50,6 +50,10 @@
   .featured-books-section .featured-books-container {
     flex-direction: column;
   }
+
+  header .nav-container .btn-container {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -84,7 +88,25 @@ font-size: 18px;
     }
 
     header .nav-container .menu-container .menu-list li a{
-        font-size: clamp(1.2rem,3vw,2rem);
+      font-size:16px; /* veya 16px */
+      padding: 8px 0;
+
+      header .nav-container .btn-container button {
+        font-size: 14px;
+        padding: 8px 14px;
+      }
+    
+      header .menu-btn i {
+        font-size: 20px;
+      }
+    
+      header .close-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    header .nav-container .btn-container {
+      display: none;
     }
   }
   

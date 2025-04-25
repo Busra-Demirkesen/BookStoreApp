@@ -38,43 +38,65 @@ if (loginBtn && closePopupBtn && formPopup) {
 
 
 
-const menu = document.getElementById('menu');
-const closeBtn = document.getElementById('close-btn');
-const menuBtn = document.getElementById('menu-btn');
-const menuLinks = document.querySelectorAll('.menu-container .menu-list li a');
-const mainHeader = document.getElementById('main-header');
-
-const threshold = 500;
-
-function close(){
-  if(window.innerWidth <= 800){
-    menu.style.transform = 'translateX(-100%)';
-  }
-  
-}
 
 
-closeBtn.addEventListener('click', close);
 
-menuLinks.forEach((link)=>{
-  link.addEventListener('click',close)
-});
 
-menuBtn.addEventListener('click',()=>{
-  menu.style.transform = 'translateX(0%)';
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const menu = document.getElementById("menu");
+  const closeBtn = document.getElementById("close-btn");
+  const menuBtn = document.getElementById("menu-btn");
+  const menuLinks = document.querySelectorAll(".menu-container .menu-list li a");
+  const mainHeader = document.getElementById("main-header");
+  const threshold = 500;
 
-window.addEventListener('scroll', ()=>{
-  if(window.pageYOffset > threshold) {
-    mainHeader.classList.add('fixed-header');
+  // Menü kapat
+  function closeMenu() {
+    if (menu && window.innerWidth <= 800) {
+      menu.style.transform = 'translateX(-100%)';
     }
+  }
+
+  // Hamburger açma
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', () => {
+      menu.style.transform = 'translateX(0%)';
+    });
+  }
+
+  // Menü kapatma butonu
+  if (closeBtn && menu) {
+    closeBtn.addEventListener('click', closeMenu);
+  }
+
+  // Menü içindeki linklere tıklanınca menüyü kapat
+  if (menuLinks.length > 0) {
+    menuLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  }
+
+  // Scroll olunca header sabitle
+  if (mainHeader) {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > threshold) {
+        mainHeader.classList.add('fixed-header');
+      } else {
+        mainHeader.classList.remove('fixed-header');
+      }
+    });
+  }
+
+  // Ekran genişliği artarsa menüyü açık bırak
+  window.addEventListener('resize', () => {
+    if (menu && window.innerWidth > 800) {
+      menu.style.transform = 'translateX(0%)';
+    } else {
+      menu.style.transform = 'translateX(-100%)';
+    }
+  });
 });
 
-window.addEventListener('resize', ()=>{
-  if(window.innerWidth > 800){
-    menu.style.transform = 'translateX(0%)';
-  }
-});
 
 
 
