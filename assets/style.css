@@ -165,7 +165,7 @@ header .close-btn, header .menu-btn{
 
 /*Searc Books*/
 
-/* Arama başlığı ve kutusu */
+
 .book-search-section {
   text-align: center;
   margin: 40px 0;
@@ -202,13 +202,13 @@ header .close-btn, header .menu-btn{
   color: #574e4e;
 }
 
-/* Sayfa başlığı */
+
 .search-title {
   text-align: center;
   margin-top: 40px;
 }
 
-/* Sonuçlar alanı */
+
 #book-list {
   display: flex;
   flex-wrap: wrap;
@@ -217,7 +217,7 @@ header .close-btn, header .menu-btn{
   padding: 40px 20px;
 }
 
-/* Kitap kartları */
+
 .product-card {
   width: 220px;
   background-color: #fff;
@@ -251,7 +251,7 @@ header .close-btn, header .menu-btn{
   object-fit: contain;
 }
 
-/* Kart içeriği */
+
 .text-container {
   padding: 15px;
   text-align: center;
@@ -323,6 +323,9 @@ header .close-btn, header .menu-btn{
   object-fit: cover;
 }
 /*Swiper Library ends*/
+
+
+
 
 .hero-section {
   width: 90%;
@@ -1145,7 +1148,7 @@ footer .footer-container .menu-container h1 {
   padding: 10px 0;
 }
 
-.social-container h1{
+.social-container h1 {
   font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
@@ -1157,25 +1160,28 @@ footer .footer-container .menu-container h1 {
   padding: 10px 0;
 }
 
-.social-container .social-row button{
-  border: none;
+.social-container .social-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 15px;
   background-color: transparent;
   border-radius: 10px;
   transition: all 0.3s linear;
   cursor: pointer;
+  text-decoration: none; 
+  color: inherit; 
 }
 
-.social-container .social-row button:hover{
-background-color: #b9785f;
-color: #fff;
-border: none;
+.social-container .social-row a:hover {
+  background-color: #b9785f;
+  color: #fff;
 }
 
-.social-container .social-row button i{
- 
-font-size: 18px;
+.social-container .social-row a i {
+  font-size: 18px;
 }
+
 
 .copy-right-container{
 width: 90%;
